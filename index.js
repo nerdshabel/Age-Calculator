@@ -26,6 +26,15 @@ ageForm.addEventListener("submit", (event) => {
     let userYear = document.querySelector(".year").value;
     let userMonth = document.querySelector(".month").value;
     let userDay = document.querySelector(".day").value;
+
+    if (userDay.length === 1) {
+        userDay = 0 + userDay;
+    }
+    if (userMonth.length === 1) {
+        userMonth = 0 + userMonth;
+    }
+    console.log(userDay, userMonth);
+
     const userDate = new Date((`${userYear}-${userMonth}-${userDay}`).toString());
 
 
